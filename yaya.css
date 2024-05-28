@@ -146,7 +146,7 @@ font-size: 30px;
 .container-footer{
 background-color: yellow;
 display: flex;
-height: 50vh;
+height: 10vh;
 justify-content: center;
 align-items: center;
 }
