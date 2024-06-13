@@ -78,11 +78,17 @@ font-size: 30px;
 
 
 .container-content {
-    background-color: red;
+    background-image: url('pro.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
