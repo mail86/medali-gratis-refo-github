@@ -173,10 +173,11 @@ align-items: center;
     align-items: center;
 }
 
-.h1-footer{
-font-size: 30;
+.container-footer{
+font-size: 20;
+color: white;  
 }
 
-.h2-footer{
+.container-footer2{
     font-size: 50;
 }
