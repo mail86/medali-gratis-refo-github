@@ -4,9 +4,10 @@ html {
     padding: 0;
   
 }
-body {background-image: url(Pro.gif);
-      background-size: cover;
-      background-position: center;
+body {
+    background-image: url(Pro.gif);
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@ background-color: purple;
 }
 
 .container-navbar{
-    background-color: blue;
+    background-color: green;
     width: 150%px;
     height: 100%px;
 }
