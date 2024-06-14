@@ -92,11 +92,17 @@ font-size: 30px;
 
 
 .container-content3 {
-    background-color: yellow;
+    background-image: url(peluru2.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 130%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 
