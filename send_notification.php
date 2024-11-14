@@ -10,7 +10,7 @@ function sendNotification($token) {
         ]
     ];
     $headers = [
-        'Authorization: key=YOUR_SERVER_KEY',
+        'Authorization: key= AIzaSyA9yJq-eHOCh_b7PyHM0CQZQBgQOBh4oRU',
         'Content-Type: application/json'
     ];
 
