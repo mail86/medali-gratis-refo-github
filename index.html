@@ -26,7 +26,7 @@
         };
         firebase.initializeApp(firebaseConfig);
         const messaging = firebase.messaging();
-    </script>
+
         messaging.requestPermission().then(() => {
     return messaging.getToken();
 }).then((token) => {
@@ -35,6 +35,7 @@
 }).catch((error) => {
     console.error("Izin notifikasi ditolak", error);
 });
+    </script>
 
           <body>            
 
