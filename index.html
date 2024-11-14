@@ -27,6 +27,15 @@
         firebase.initializeApp(firebaseConfig);
         const messaging = firebase.messaging();
     </script>
+        messaging.requestPermission().then(() => {
+    return messaging.getToken();
+}).then((token) => {
+    console.log("Token perangkat:", token);
+    // Kirim token ini ke server Anda untuk digunakan dalam pengiriman notifikasi
+}).catch((error) => {
+    console.error("Izin notifikasi ditolak", error);
+});
+
           <body>            
 
               <!-- NAVIGATION BAR -->
