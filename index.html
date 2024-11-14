@@ -11,31 +11,35 @@
 
   gtag('config', 'G-MQNY3KJ67N');
 </script>
-    <!-- Kode Firebase -->
+            <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
     <script>
         // Konfigurasi Firebase
         const firebaseConfig = {
-            apiKey: "API_KEY",
-            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_PROJECT_ID.appspot.com",
-            messagingSenderId: "SENDER_ID",
-            appId: "APP_ID"
+            apiKey: "AIzaSyA9yJq-eHOCh_b7PyHM0CQZQBgQOBh4oRU",
+            authDomain: "my-website-cbcfe.firebaseapp.com",
+            projectId: "my-website-cbcfe",
+            storageBucket: "my-website-cbcfe.firebasestorage.app",
+            messagingSenderId: "222580545101",
+            appId: "1:222580545101:web:8050b6a6dc091327626e04",
+            measurementId: "G-8B554H0HFE"
+};
         };
         firebase.initializeApp(firebaseConfig);
         const messaging = firebase.messaging();
 
+        // Minta izin untuk mengirim notifikasi dan ambil token perangkat
         messaging.requestPermission().then(() => {
-    return messaging.getToken();
-}).then((token) => {
-    console.log("Token perangkat:", token);
-    // Kirim token ini ke server Anda untuk digunakan dalam pengiriman notifikasi
-}).catch((error) => {
-    console.error("Izin notifikasi ditolak", error);
-});
+            return messaging.getToken();
+        }).then((token) => {
+            console.log("Token perangkat:", token);
+            // Kirim token ini ke server Anda untuk digunakan dalam pengiriman notifikasi
+        }).catch((error) => {
+            console.error("Izin notifikasi ditolak", error);
+        });
     </script>
+        <script src="path/to/firebase-messaging.js"></script>
 
           <body>            
 
