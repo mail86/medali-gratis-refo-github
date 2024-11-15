@@ -2,43 +2,47 @@
     <head>
       <title>web mailda turohmnan</title>
       <link rel="stylesheet" href="yaya.css" />
-        <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MQNY3KJ67N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQNY3KJ67N"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-MQNY3KJ67N');
+      </script>
 
-  gtag('config', 'G-MQNY3KJ67N');
-</script>
-            <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
-    <script>
-        // Konfigurasi Firebase
-        const firebaseConfig = {
-            apiKey: "AIzaSyA9yJq-eHOCh_b7PyHM0CQZQBgQOBh4oRU",
-            authDomain: "my-website-cbcfe.firebaseapp.com",
-            projectId: "my-website-cbcfe",
-            storageBucket: "my-website-cbcfe.firebasestorage.app",
-            messagingSenderId: "222580545101",
-            appId: "1:222580545101:web:8050b6a6dc091327626e04",
-            measurementId: "G-8B554H0HFE"
-};
-        };
-        firebase.initializeApp(firebaseConfig);
-        const messaging = firebase.messaging();
+      <!-- Firebase SDK -->
+      <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging.js"></script>
+      <script>
+          // Konfigurasi Firebase
+          const firebaseConfig = {
+              apiKey: "AIzaSyA9yJq-eHOCh_b7PyHM0CQZQBgQOBh4oRU",
+              authDomain: "my-website-cbcfe.firebaseapp.com",
+              projectId: "my-website-cbcfe",
+              storageBucket: "my-website-cbcfe.firebasestorage.app",
+              messagingSenderId: "222580545101",
+              appId: "1:222580545101:web:8050b6a6dc091327626e04",
+              measurementId: "G-8B554H0HFE"
+          };
 
-        // Minta izin untuk mengirim notifikasi dan ambil token perangkat
-        messaging.requestPermission().then(() => {
-            return messaging.getToken();
-        }).then((token) => {
-            console.log("Token perangkat:", token);
-            // Kirim token ini ke server Anda untuk digunakan dalam pengiriman notifikasi
-        }).catch((error) => {
-            console.error("Izin notifikasi ditolak", error);
-        });
-    </script>
+          // Inisialisasi Firebase
+          firebase.initializeApp(firebaseConfig);
+
+          // Inisialisasi Firebase Messaging
+          const messaging = firebase.messaging();
+
+          // Minta izin untuk mengirim notifikasi dan ambil token perangkat
+          messaging.requestPermission().then(() => {
+              return messaging.getToken();
+          }).then((token) => {
+              console.log("Token perangkat:", token);
+              // Kirim token ini ke server Anda untuk digunakan dalam pengiriman notifikasi
+          }).catch((error) => {
+              console.error("Izin notifikasi ditolak", error);
+          });
+      </script>
         <body>            
 
               <!-- NAVIGATION BAR -->
